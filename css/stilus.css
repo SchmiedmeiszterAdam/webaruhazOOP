@@ -11,10 +11,10 @@ body{
 main{
     display: grid;
     grid-template-areas: 
-    "nav nav"
-    "art as";
+    "nav nav nav"
+    "s art as";
 }
-.sablon{
+article .sablon{
     display: grid;
     grid-template-areas: 
     "c c"
@@ -30,7 +30,7 @@ main{
 .sablon >*{
     margin: 5px;
 }
-article{
+#fo-oldal{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-area: art;
@@ -94,4 +94,20 @@ aside h3{
 }
 aside h3{
     height: fit-content;
+}
+td img{
+    width: 200px;
+}
+td{
+    border: 1px solid black;
+}
+table{
+    border-collapse: collapse;
+}
+#szures{
+    margin: 20px;
+    grid-area: s;
+}
+#sablon-section{
+    visibility: hidden;
 }

@@ -1,13 +1,11 @@
-$(function () {
-    window.beolvas("table", TermekAdmin)
-    $(window).on("termekTorles", (event) => {
-        let termek = event.detail.nev
+class Ajax{
+    constructor(tipus,termek){
         $.ajax({
             url: "termekekTomb/" + termek,
-            type: "DELETE",
+            type: tipus,
             success: function (result) {
                 window.beolvas("table", TermekAdmin,"")
             }
         })
-    })
-})
+    }
+}
