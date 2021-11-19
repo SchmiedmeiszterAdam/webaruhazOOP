@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="../js/beolvas.js"></script>
+    <script src="../js/termek.js"></script>
+    <script src="../js/kosar.js"></script>
+    <script src="../js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/stilus.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="fizetes.html">Fizetés</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+        <article>
+            <div class="sablon">
+                <h2></h2>
+                <img src="" alt="">
+                <p class="leiras"></p>
+                <p class="ar"></p>
+                <input type="button" value="Kosárba" class="kosarba">
+            </div>
+        </article>
+        <aside>
+            <h3>A kosár tartalma</h3>
+            <div id="termekek"></div>
+            <p class="osszar"></p>
+            <input type="button" value="Tovább a fizetéshez" id="fizetes"
+                onclick="window.location.href='fizetes.html';">
+        </aside>
+    </main>
+</body>
+
+</html>

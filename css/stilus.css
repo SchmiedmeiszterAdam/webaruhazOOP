@@ -1,0 +1,97 @@
+@charset "utf-8";
+*{
+    margin: 0;
+}
+img{
+    width: 90%;
+}
+body{
+    background-color: beige;
+}
+main{
+    display: grid;
+    grid-template-areas: 
+    "nav nav"
+    "art as";
+}
+.sablon{
+    display: grid;
+    grid-template-areas: 
+    "c c"
+    "k k"
+    "l l"
+    "g a"
+    ;
+    width: 200px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px;
+}
+.sablon >*{
+    margin: 5px;
+}
+article{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-area: art;
+}
+h2{
+    grid-area: c;
+}
+img{
+    grid-area: k;
+}
+.leiras{
+    grid-area: l;
+}
+input{
+    grid-area: g;
+    width: fit-content;
+    height: fit-content;
+}
+.ar{
+    grid-area: a;
+    height: 20px;
+    width: fit-content;
+}
+aside{
+    grid-area: as;
+    background-color: white;
+    width: 90%;
+    display: grid;
+    grid-template-areas: 
+    "kc"
+    "kt"
+    "ko"
+    "kf"
+    ;
+    gap: 10px;
+}
+aside >*{
+    margin: 8px;
+}
+nav{
+    grid-area: nav;
+}
+aside h3{
+    grid-area: kc;
+}
+#termekek{
+    grid-area: kt;
+}
+.termekKosarban{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.osszar{
+    grid-area: ko;
+    display: flex;
+    justify-content: flex-end;
+}
+#fizetes{
+    grid-area: kf;
+}
+aside h3{
+    height: fit-content;
+}
