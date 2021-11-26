@@ -111,3 +111,8 @@ table{
 #sablon-section{
     visibility: hidden;
 }
+#modisit-form{
+    visibility: hidden;
+    border: 2px solid sienna;
+    height: fit-content;
+}

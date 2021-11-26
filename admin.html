@@ -5,35 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../jquery-3.6.0.js"></script>
-    <script src="../js/beolvas.js"></script>
-    <script src="../js/termek.js"></script>
-    <link rel="stylesheet" href="../css/stilus.css">
-    <script src="../js/admin.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/termek.js"></script>
+    <script src="js/beolvas.js"></script>
+    <link rel="stylesheet" href="css/stilus.css">
     <title>Document</title>
 </head>
 
 <body>
     <main>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Kezdőlap</a></li>
-            </ul>
-        </nav>
-        <table>
-            <tr class="sablon">
+        <table id = "table-sablon">
+            <tr class="sablon-section">
                 <td class="cim"></td>
                 <td class=""><img class="kep" src="" alt=""></td>
                 <td class="leiras"></td>
                 <td class="ar"></td>
                 <td class=""><input type="button" value="Törlés" class="torol"></td>
+                <td class=""><input type="button" value="Módosítás" class="modosit"></td>
             </tr>
         </table>
-        <aside>
-            <form>
-                <label for=""></label>
-            </form>
-        </aside>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+            </ul>
+        </nav>
+        <table id = "admin-table">
+
+        </table>
+        <form id="modisit-form">
+            <label for="nev">Név</label>
+            <input type="text" id="nev" name="nev"><br><br>
+            <label for="kep">Kép</label>
+            <input type="file" id="kep" name="kep"><br><br>
+            <label for="leiras">Leírás</label>
+            <textarea id="leiras" name="leiras"></textarea><br><br>
+            <label for="ar">Ár</label>
+            <input type="number" id="ar" name="ar"><br><br>
+            <input type="button" value="Mentés"id="modosit-mentes">
+        </form>
     </main>
 </body>
 

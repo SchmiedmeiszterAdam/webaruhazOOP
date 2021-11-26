@@ -1,6 +1,8 @@
 $(function () {
     const kosar = new Kosar()
-    window.beolvas("article", TermekGaleria,"")
+    const sablon = $("#sablon-section .sablon")
+    new Ajax().getAjax("http://localhost:3000/termek","","article",TermekGaleria,sablon)
+
     $(window).on("termekGomb", (event) => {
         let termek = event.detail
         kosar.termekFelvetel(termek)
@@ -9,6 +11,6 @@ $(function () {
     $("#keres").on("keyup",szures)
     function szures(){
         let szures = "nev_like="+$(this).val()
-        window.beolvas("article", TermekGaleria,"?"+szures)
+        new Ajax().getAjax("http://localhost:3000/termek",szures,"article",TermekGaleria,sablon)
     }
 })

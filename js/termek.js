@@ -34,12 +34,18 @@ class TermekAdmin extends Termek {
         this.kep = this.elem.find(".kep")
         this.leiras = this.elem.children(".leiras")
         this.ar = this.elem.children(".ar")
-        this.gomb = this.elem.find(".torol")
+        this.torolGomb = this.elem.find(".torol")
+        this.modositGomb = this.elem.find(".modosit")
         this.setAdatok()
-        this.gomb.on("click", () => { this.kattintasTrigger() })
+        this.torolGomb.on("click", () => { this.kattintasTrigger() })
+        this.modositGomb.on("click", () => { this.kattintasTrigger2() })
     }
     kattintasTrigger() {
         let esemeny = new CustomEvent("termekTorles", { detail: this.adat })
+        window.dispatchEvent(esemeny)
+    }
+    kattintasTrigger2() {
+        let esemeny = new CustomEvent("termekModositas", { detail: this.adat })
         window.dispatchEvent(esemeny)
     }
 }
