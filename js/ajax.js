@@ -15,14 +15,14 @@ class Ajax{
             }
         });
     }
-    postAjax(fajlNev,szulo, a, lekerdez,adat) {
-        const termekekTomb = []
+    postAjax(fajlNev,adat) {
         $.ajax({
-            url: fajlNev + lekerdez,
+            url: fajlNev,
             type: "POST",
             data:adat,
             success: function (result) {
-
+                const sablon = $("#table-sablon .sablon-section")
+                new Ajax().getAjax("http://localhost:3000/termek","","#admin-table",TermekAdmin,sablon)
             }
         });
         

@@ -16,7 +16,7 @@
 
 <body>
     <main>
-        <table id = "table-sablon">
+        <table id="table-sablon">
             <tr class="sablon-section">
                 <td class="cim"></td>
                 <td class=""><img class="kep" src="" alt=""></td>
@@ -31,20 +31,33 @@
                 <li><a href="index.html">Kezdőlap</a></li>
             </ul>
         </nav>
-        <table id = "admin-table">
+        <table id="admin-table">
 
         </table>
-        <form id="modisit-form">
-            <label for="nev">Név</label>
-            <input type="text" id="nev" name="nev"><br><br>
-            <label for="kep">Kép</label>
-            <input type="file" id="kep" name="kep"><br><br>
-            <label for="leiras">Leírás</label>
-            <textarea id="leiras" name="leiras"></textarea><br><br>
-            <label for="ar">Ár</label>
-            <input type="number" id="ar" name="ar"><br><br>
-            <input type="button" value="Mentés"id="modosit-mentes">
-        </form>
+        <div id="formok">
+            <form id="modisit-form">
+                <label for="modosit-nev">Név</label>
+                <input type="text" id="modosit-nev" name="modosit-nev"><br><br>
+                <label for="modosit-kep">Kép</label>
+                <input type="file" id="modosit-kep" name="modosit-kep"><br><br>
+                <label for="modosit-leiras">Leírás</label>
+                <textarea id="modosit-leiras" name="modosit-leiras"></textarea><br><br>
+                <label for="modosit-ar">Ár</label>
+                <input type="number" id="modosit-ar" name="modosit-ar"><br><br>
+                <input type="button" value="Mentés" id="modosit-mentes">
+            </form>
+            <form id="uj-termek-form">
+                <label for="uj-termek-nev">Név</label>
+                <input type="text" id="uj-termek-nev" name="uj-termek-nev"><br><br>
+                <label for="kep">Kép</label>
+                <input type="file" id="uj-termek-kep" name="uj-termek-kep"><br><br>
+                <label for="leiras">Leírás</label>
+                <textarea id="uj-termek-leiras" name="uj-termek-leiras"></textarea><br><br>
+                <label for="uj-termek-ar">Ár</label>
+                <input type="number" id="uj-termek-ar" name="uj-termek-ar"><br><br>
+                <input type="button" value="Mentés" id="uj-termek-mentes">
+            </form>
+        </div>
     </main>
 </body>
 

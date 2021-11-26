@@ -17,11 +17,24 @@ $(function () {
     })
     $("#modosit-mentes").on("click", () => {
         let adat = {
-            nev: $("#nev").val(),
-            leiras: $("#leiras").val(),
-            ar: $("#ar").val(),
-            fajl: $("#fajl").val()
+            nev: $("#modosit-nev").val(),
+            leiras: $("#modosit-leiras").val(),
+            ar: $("#modosit-ar").val(),
+            fajl: $("#modosit-fajl").val()
         }
         new Ajax().putAjax("http://localhost:3000/termek", modositandoTermekId, adat)
+    })
+    $("#uj-termek-mentes").on("click", () => {
+        let adat = {
+            nev: $("#uj-termek-nev").val(),
+            leiras: $("#uj-termek-leiras").val(),
+            ar: $("#uj-termek-ar").val(),
+            fajl: $("#uj-termek-fajl").val()
+        }
+        $("#uj-termek-nev").val(""),
+        $("#uj-termek-leiras").val(""),
+        $("#uj-termek-ar").val(""),
+        $("#uj-termek-fajl").val("")
+        new Ajax().postAjax("http://localhost:3000/termek", adat)
     })
 })
