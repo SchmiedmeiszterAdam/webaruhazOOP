@@ -27,12 +27,13 @@ class Ajax{
         });
         
     }
-    putAjax(fajlNev,adat,id) {
+    putAjax(fajlNev,id,adat) {
         $.ajax({
             url: fajlNev +"/"+ id,
             type: "PUT",
             data:adat,
             success: function (result) {
+                const sablon = $("#table-sablon .sablon-section")
                 new Ajax().getAjax("http://localhost:3000/termek","","#admin-table",TermekAdmin,sablon)
             }
         });
